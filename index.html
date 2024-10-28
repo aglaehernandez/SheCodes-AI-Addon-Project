@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Recipe Generator by Aglae</title>
   </head>
   <body>
@@ -28,7 +29,7 @@
             type="text"
             class="ingredient-entry"
             id="ingredientInput"
-            placeholder="Enter an ingredient you want in your Recipe"
+            placeholder="Enter an ingredient, e.g., blueberries"
             autofocus
             required
             autocomplete="off"
@@ -36,7 +37,7 @@
           <br />
           <input type="submit" value="Generate Recipe" class="submit-button" />
         </form>
-        <div class="recipe" id="recipe"></div>
+        <div class="recipe hidden" id="recipe"></div>
       </main>
       <footer>
         Coded by

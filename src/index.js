@@ -21,6 +21,15 @@ function generateRecipe(event) {
 
   axios.get(apiUrl).then(displayRecipe);
 
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
+
+  new Typewriter("#recipe", {
+    strings: [`Generating recipe...`],
+    autoStart: true,
+    loop: true,
+  });
+
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
 }
