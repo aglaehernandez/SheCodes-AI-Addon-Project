@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Recipe Generator by Aglae</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
 
       <main>
         <form id="recipe-generator-form">
-          <select id="recipe-type" class="recipe-type-select" required>
+          <select id="recipeTypeInput" class="recipe-type-select" required>
             <option value="">Select a recipe type</option>
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Lunch</option>
@@ -26,6 +27,7 @@
           <input
             type="text"
             class="ingredient-entry"
+            id="ingredientInput"
             placeholder="Enter an ingredient you want in your Recipe"
             autofocus
             required
@@ -34,15 +36,7 @@
           <br />
           <input type="submit" value="Generate Recipe" class="submit-button" />
         </form>
-        <div class="recipe">
-          <div class="specifications">
-            <div class="time" id="time"></div>
-            <div class="servings" id="servings"></div>
-          </div>
-          <div class="ingredients" id="ingredients"></div>
-
-          <div class="instructions" id="instructions"></div>
-        </div>
+        <div class="recipe" id="recipe"></div>
       </main>
       <footer>
         Coded by
