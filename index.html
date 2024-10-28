@@ -7,67 +7,69 @@
     <title>Recipe Generator by Aglae</title>
   </head>
   <body>
-    <header>
-      <h1>Recipe Generator</h1>
-    </header>
-    <main>
-      <form action="">
-        <select id="recipe-type">
-          <option value="">Select a recipe type</option>
-          <option value="breakfast">Breakfast</option>
-          <option value="lunch">Lunch</option>
-          <option value="dinner">Dinner</option>
-          <option value="snack">Snack</option>
-          <option value="drink">Drink</option>
-        </select>
-        <br />
-        <input
-          type="text"
-          name=""
-          id=""
-          placeholder="Enter an ingredient you want in your Recipe"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <br />
-        <input type="submit" value="Generate Recipe" />
-      </form>
-      <div class="recipe">
-        <div class="time">Total time: 10min</div>
-        <div class="servings">Servings: 3</div>
-        <div class="ingredients">
-          Ingredients:
+    <div class="container">
+      <header>
+        <h1>Recipe Generator</h1>
+      </header>
+
+      <main>
+        <form action="">
+          <select id="recipe-type" class="recipe-type-select" required>
+            <option value="">Select a recipe type</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snack</option>
+            <option value="drink">Drink</option>
+          </select>
           <br />
-          Raw rice - ½ cup
+          <input
+            type="text"
+            class="ingredient-entry"
+            placeholder="Enter an ingredient you want in your Recipe"
+            autofocus
+            required
+            autocomplete="off"
+          />
           <br />
-          Milk - 2-½ cups
-          <br />
-          Salt - to taste
+          <input type="submit" value="Generate Recipe" class="submit-button" />
+        </form>
+        <div class="recipe">
+          <div class="time">Total time: 10min</div>
+          <div class="servings">Servings: 3</div>
+          <div class="ingredients">
+            Ingredients:
+            <br />
+            Raw rice - ½ cup
+            <br />
+            Milk - 2-½ cups
+            <br />
+            Salt - to taste
+          </div>
+          <div class="instructions">
+            Instructions:
+            <br />
+            1. boil pasta
+          </div>
         </div>
-        <div class="instructions">
-          Instructions:
-          <br />
-          1. boil pasta
-        </div>
-      </div>
-    </main>
-    <footer>
-      Coded by
-      <a href="https://github.com/aglaehernandez" target="_blank">
-        Aglae Hernandez</a
-      >, is open-sourced on
-      <a
-        href="https://github.com/aglaehernandez/SheCodes-AI-Addon-Project"
-        target="_blank"
-      >
-        GitHub
-      </a>
-      and hosted on
-      <a href="https://recipe-generator-byaglae.netlify.app/" target="_blank"
-        >Netlify</a
-      >.
-    </footer>
+      </main>
+      <footer>
+        Coded by
+        <a href="https://github.com/aglaehernandez" target="_blank">
+          Aglae Hernandez</a
+        >, is open-sourced on
+        <a
+          href="https://github.com/aglaehernandez/SheCodes-AI-Addon-Project"
+          target="_blank"
+        >
+          GitHub
+        </a>
+        and hosted on
+        <a href="https://recipe-generator-byaglae.netlify.app/" target="_blank"
+          >Netlify</a
+        >.
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
