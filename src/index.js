@@ -8,9 +8,18 @@ function generateRecipe(event) {
 
   let ingredientInput = document.querySelector("#ingredientInput");
   let recipeTypeInput = document.querySelector("#recipeTypeInput");
+  let dietaryCheckbox = document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+  );
+
+  let dietaryInput = Array.from(dietaryCheckbox).map((x) => x.value);
+
+  console.log(dietaryCheckbox);
+
+  console.log(dietaryInput);
 
   let apiKey = `f9a47eo48c7db6t0bcbfca0c176bd333`;
-  let prompt = `The user instructions are: Generate a ${recipeTypeInput.value} recipe using ${ingredientInput.value}`;
+  let prompt = `The user instructions are: Generate a ${recipeTypeInput.value} recipe using ${ingredientInput.value} that is ${dietaryInput}`;
   let context = `You are an experienced recipe writer. 
   Your mission is to generate a recipe following the user instructions.
   Write your answer using basic HTML only include the body part of HTML (but don't write body or html) and include 
@@ -18,6 +27,8 @@ function generateRecipe(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayRecipe);
+
+  console.log(prompt);
 
   let recipeElement = document.querySelector("#recipe");
   recipeElement.classList.remove("hidden");

@@ -52,6 +52,13 @@ form {
   margin: 0 auto;
 }
 
+.dietary {
+  padding-bottom: 16px;
+  font-size: 16px;
+  color: #2c263f;
+  text-align: center;
+}
+
 .submit-button {
   padding: 8px;
   border: 1px solid rgba(39, 33, 66, 0.5);
