@@ -25,6 +25,7 @@ form {
   background-color: white;
   border-radius: 10px;
   margin-bottom: 30px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.03);
 }
 
 .recipe-type-select {
@@ -64,7 +65,7 @@ form {
 }
 
 .recipe {
-  font-size: 14px;
+  font-size: 16px;
   background-color: white;
   padding: 20px;
   line-height: 24px;
