@@ -1,8 +1,6 @@
 function displayRecipe(response) {
   let recipeElement = document.querySelector("#recipe");
   recipeElement.innerHTML = response.data.answer;
-
-  console.log(response.data.answer);
 }
 
 function generateRecipe(event) {
@@ -29,9 +27,6 @@ function generateRecipe(event) {
     autoStart: true,
     loop: true,
   });
-
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
 }
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");
