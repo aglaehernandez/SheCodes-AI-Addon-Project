@@ -16,7 +16,7 @@ function generateRecipe(event) {
 
   let apiKey = `f9a47eo48c7db6t0bcbfca0c176bd333`;
   let prompt = `The user instructions are: Generate a ${recipeTypeInput.value} recipe using ${ingredientInput.value} that is ${dietaryInput}`;
-  let context = `You are an experienced recipe writer. 
+  let context = `You are an experienced recipe writer that writes in Australian English. 
   Your mission is to generate a recipe following the user instructions.
   Write your answer using basic HTML only include the body part of HTML (but don't write body or html) and include 
   the name of the recipe in h2, the total time to prepare (title in p strong), the number of servings (title in p strong), the list of ingredients (title in h3 and ingredients in li) and the instructions (title in h3 and steps in ol)`;
