@@ -14,10 +14,6 @@ function generateRecipe(event) {
 
   let dietaryInput = Array.from(dietaryCheckbox).map((x) => x.value);
 
-  console.log(dietaryCheckbox);
-
-  console.log(dietaryInput);
-
   let apiKey = `f9a47eo48c7db6t0bcbfca0c176bd333`;
   let prompt = `The user instructions are: Generate a ${recipeTypeInput.value} recipe using ${ingredientInput.value} that is ${dietaryInput}`;
   let context = `You are an experienced recipe writer. 
@@ -27,8 +23,6 @@ function generateRecipe(event) {
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayRecipe);
-
-  console.log(prompt);
 
   let recipeElement = document.querySelector("#recipe");
   recipeElement.classList.remove("hidden");
